@@ -1,0 +1,220 @@
+/* Trình highlight */
+.trinh-highlight {
+  font-size: 5rem;
+  font-weight: 900;
+  color: #fff;
+  text-shadow: 0 0 24px #ff2d2d, 0 0 48px #ffd700, 0 0 12px #00ffea;
+  margin-bottom: 0.5em;
+  letter-spacing: 4px;
+}
+/* Balloons effect */
+.balloons {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 2;
+}
+.balloon {
+  position: absolute;
+  bottom: -120px;
+  width: 48px;
+  height: 64px;
+  border-radius: 24px 24px 24px 24px / 32px 32px 32px 32px;
+  box-shadow: 0 8px 24px #ff2d2d44;
+  animation: balloon-float 6s linear infinite;
+  opacity: 0.85;
+  border: 2px solid #fff;
+}
+@keyframes balloon-float {
+  0% { bottom: -120px; }
+  100% { bottom: 100vh; }
+}
+
+/* Date flash effect */
+.date-flash {
+  color: #ffd700;
+  text-shadow: 0 0 12px #ff2d2d, 0 0 24px #ffd700;
+}
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  background: linear-gradient(135deg, #ff2d2d 60%, #fff 100%);
+  min-height: 100vh;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+/* Birthday App custom styles */
+.birthday-app {
+  position: relative;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ff2d2d 80%, #fff 100%);
+  font-family: 'Montserrat', 'Arial', sans-serif;
+}
+
+.birthday-content {
+  position: relative;
+  z-index: 1;
+  padding-top: 60px;
+}
+
+.rainbow-text {
+  font-size: 3rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #ff2d2d, #ffd700, #00ffea, #ff2d2d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0.5em;
+  text-shadow: 2px 2px 8px #ff2d2d88;
+}
+
+.subtitle {
+  font-size: 1.3rem;
+  color: #fff;
+  background: rgba(255,45,45,0.7);
+  border-radius: 12px;
+  padding: 0.5em 1em;
+  margin-bottom: 1.5em;
+  box-shadow: 0 2px 8px #ff2d2d44;
+}
+
+.food-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  justify-content: center;
+  margin-bottom: 2em;
+}
+.food-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px #ff2d2d44;
+  border: 2px solid #ff2d2d;
+  background: #fff;
+  transition: transform 0.2s;
+}
+.food-img:hover {
+  transform: scale(1.15) rotate(-5deg);
+  box-shadow: 0 4px 16px #ff2d2d88;
+}
+
+/* Birthday cake effect */
+.effect-cake {
+  display: flex;
+  justify-content: center;
+  margin-top: 2em;
+}
+.cake {
+  position: relative;
+  width: 120px;
+  height: 160px;
+}
+.cake-top {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  width: 100px;
+  height: 30px;
+  background: #fff0f0;
+  border-radius: 50px 50px 0 0;
+  border: 3px solid #ff2d2d;
+}
+.cake-body {
+  position: absolute;
+  top: 30px;
+  left: 10px;
+  width: 100px;
+  height: 80px;
+  background: #ff2d2d;
+  border-radius: 0 0 50px 50px;
+  border: 3px solid #ff2d2d;
+}
+.cake-bottom {
+  position: absolute;
+  top: 110px;
+  left: 0;
+  width: 120px;
+  height: 30px;
+  background: #fff0f0;
+  border-radius: 0 0 60px 60px;
+  border: 3px solid #ff2d2d;
+}
+.candle {
+  position: absolute;
+  top: 10px;
+  left: 55px;
+  width: 10px;
+  height: 30px;
+  background: #ffd700;
+  border-radius: 5px;
+  border: 2px solid #ff2d2d;
+  z-index: 2;
+}
+.flame {
+  position: absolute;
+  top: -12px;
+  left: 2px;
+  width: 6px;
+  height: 12px;
+  background: radial-gradient(circle at 50% 60%, #ffd700 60%, #ff2d2d 100%);
+  border-radius: 50% 50% 50% 50%;
+  animation: flame-flicker 1s infinite alternate;
+}
+@keyframes flame-flicker {
+  0% { transform: scaleY(1) scaleX(1); }
+  100% { transform: scaleY(1.2) scaleX(0.8); }
+}
+
+/* Ronaldo effect */
+.ronaldo {
+  margin-top: 2em;
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 2px 2px 12px #ff2d2d, 0 0 20px #ffd700;
+  animation: siu 1.2s infinite alternate;
+}
+@keyframes siu {
+  0% { letter-spacing: 2px; }
+  100% { letter-spacing: 12px; color: #ffd700; }
+}
